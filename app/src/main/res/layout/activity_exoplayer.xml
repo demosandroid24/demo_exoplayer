@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- layout that defines the UI for media playback using the SimpleExoPlayerView from the ExoPlayer library. It sets up a view for the player, handles media controls, and displays a buffering progress bar.-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_exoplayer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:keepScreenOn="true"
+    >
+    <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+        android:id="@+id/player_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:rewind_increment="3000"
+        app:fastforward_increment="3000"
+        app:show_buffering="when_playing"/>
+    <!-- This is the view for the ExoPlayer, a media player library for Android. -->
+    <!-- It displays the video playback controls and allows users to interact with the media content. -->
+    <!-- The player_view is a SimpleExoPlayerView, which is a customizable view provided by ExoPlayer library. -->
+    <!-- The rewind_increment attribute specifies the duration in milliseconds to rewind when the rewind button is pressed. -->
+    <!-- The fastforward_increment attribute specifies the duration in milliseconds to fast-forward when the fast-forward button is pressed. -->
+    <!-- The show_buffering attribute determines when to display the buffering progress bar. In this case, it only shows when the video is playing. -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#88000000"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+        <!-- This is a container LinearLayout that serves as the root of the control UI. -->
+        <!-- It is placed underneath the player_view and has a transparent black background (#88000000). -->
+        <!-- The height is set to wrap_content, so it will take up only as much height as needed for its contents. -->
+        <!-- The tools:ignore attribute is used for design-time rendering and can be ignored in actual implementation. -->
+        <LinearLayout
+            android:id="@+id/controls_root"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+            <!-- This is another LinearLayout nested within the controls_root LinearLayout. -->
+            <!-- It is used to hold the playback control buttons, such as play/pause and seek buttons. -->
+            <!-- The width is set to match_parent, so it takes up the full width of its parent LinearLayout. -->
+            <!-- The height is set to wrap_content, so it takes up only as much height as needed for its contents. -->
+            <!-- The orientation is set to horizontal, so the control buttons are laid out horizontally within the LinearLayout. -->
+            <!-- The visibility is initially set to gone, which means the control buttons are not visible. -->
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

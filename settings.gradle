@@ -1,0 +1,24 @@
+pluginManagement {
+    repositories {
+        google()
+        // This line specifies the JCenter repository which is used to fetch dependencies for the project.
+        // JCenter is a popular Maven repository that hosts a wide range of open source libraries and dependencies.
+        // This repository is typically added in the build.gradle file to facilitate the inclusion of external libraries in the project.
+        jcenter()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        // This line specifies the JCenter repository which is used to fetch dependencies for the project.
+        // JCenter is a popular Maven repository that hosts a wide range of open source libraries and dependencies.
+        // This repository is typically added in the build.gradle file to facilitate the inclusion of external libraries in the project.
+        jcenter()
+        mavenCentral()
+    }
+}
+rootProject.name = "demo"
+include ':app'

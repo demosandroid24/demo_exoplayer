@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">app components</string>
+    <string name="home_btn_exoplayer_text">exoplayer movie</string>
+    <string name="exo_track_selection_title_subtitles">Subtitles</string>
+
+
+    <!-- exoplayer errors-->
+    <string name="error_generic">player has failed</string>
+    <string name="error_404">requested resource could not be found.</string>
+    <string name="error_querying_decoders">Unavailable or incompatible codecs on the device.</string>
+    <string name="error_no_secure_decoder">device or media player does not have a secure decoder</string>
+    <string name="error_no_decoder">error</string>
+    <string name="error_instantiating_decoder">error</string>
+    <!-- end exoplayer errors-->
+</resources>
